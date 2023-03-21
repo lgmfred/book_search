@@ -18,7 +18,8 @@ defmodule BookSearchWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
-    # resources("/authors", AuthorController)
+
+    # Routes for the AuthorController actions
     get "/authors", AuthorController, :index
     get "/authors/new", AuthorController, :new
     get "/authors/:id", AuthorController, :show
@@ -27,6 +28,16 @@ defmodule BookSearchWeb.Router do
     put "/authors/:id", AuthorController, :update
     patch "/authors/:id", AuthorController, :update
     delete "/authors/:id", AuthorController, :delete
+
+    # Routes for the BookController actions
+    get "/books", BookController, :index
+    get "/books/new", BookController, :new
+    get "/books/:id", BookController, :show
+    get "/books/edit/:id", BookController, :edit
+    post "/books", BookController, :create
+    put "/books/:id", BookController, :update
+    patch "/books/:id", BookController, :update
+    delete "/books/:id", BookController, :delete
   end
 
   # Other scopes may use custom stacks.
