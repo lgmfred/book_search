@@ -7,6 +7,12 @@
     <%= @book.title %>
   </li>
 
+  <li>
+    <strong>Author:</strong>
+    <%!-- /authors/4 --%>
+    <%= if @book.author, do: link(@book.author.name, to: Routes.author_path(@conn, :show, @book.author)) %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.book_path(@conn, :edit, @book) %></span> |
