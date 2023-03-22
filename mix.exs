@@ -75,7 +75,8 @@ defmodule BookSearch.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:faker, "~> 0.17.0"}
     ]
   end
 

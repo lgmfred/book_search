@@ -6,6 +6,14 @@
     <strong>Name:</strong>
     <%= @author.name %>
   </li>
+  <li>
+    <strong>Books:</strong>
+      <ul>
+        <%= for book <- @author.books do %>
+          <li><%= book.title %></li>
+        <% end %>
+      </ul>
+  </li>
 
 </ul>
 

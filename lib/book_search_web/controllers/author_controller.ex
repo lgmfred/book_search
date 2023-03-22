@@ -32,7 +32,7 @@ defmodule BookSearchWeb.AuthorController do
   end
 
   def show(conn, %{"id" => id}) do
-    author = Authors.get_author!(id)
+    author = Authors.get_author!(id) |> BookSearch.Repo.preload([:books])
     render(conn, "show.html", author: author)
   end
 
